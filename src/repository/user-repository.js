@@ -6,7 +6,6 @@
 
     async create(data){
         try {
-            console.log(User)
             const user = await User.create(data);
             return user;
         } catch (error) {
@@ -29,7 +28,17 @@
         }
     }
 
- }
-
-
- module.exports = UserRepository;
+    async getById(userId){
+        try{
+            const user = await User.findByPk(userId,{
+                attributes :['email','id'] // It only fetch email , id column from the table of a particular id.
+            });
+            return user;
+        } catch(error){
+            console.log("Something went wrong on repository layer");
+            throw error;
+        }
+    }
+ 
+}
+module.exports = UserRepository;
