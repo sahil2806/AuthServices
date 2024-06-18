@@ -7,9 +7,8 @@ const app = express();
 
 //  const {User} = require('./models/index');
 //  const bcrypt = require('bcrypt');
-
-const service =  require('./services/user-service')
-const obj = new service();
+// const service =  require('./services/user-service')
+// const obj = new service();
 
 const prepareAndStartServer = () =>{
 
@@ -26,9 +25,9 @@ const prepareAndStartServer = () =>{
 
         // const result = obj.createToken({email:'rahul@admin.com' , id:5});
         // console.log(result)
-        const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhaHVsQGFkbWluLmNvbSIsImlkIjo1LCJpYXQiOjE3MTg3MTM2NzksImV4cCI6MTcxODgwMDA3OX0.jNRK-mths37UdVXc4nAgmxV0eN5uheKE157TQv_YfkI';
-        const response = obj.verifyToken(token);
-        console.log(response);
+        // const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhaHVsQGFkbWluLmNvbSIsImlkIjo1LCJpYXQiOjE3MTg3MTM2NzksImV4cCI6MTcxODgwMDA3OX0.jNRK-mths37UdVXc4nAgmxV0eN5uheKE157TQv_YfkI';
+        // const response = obj.verifyToken(token);
+        // console.log(response);
 
     })
 }
