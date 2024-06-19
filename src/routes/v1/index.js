@@ -8,6 +8,7 @@ const {AuthRequestValidators} = require('../../middlewares/index');
 router.post('/signup',AuthRequestValidators.validateUserAuth ,UserController.create);
 router.get('/signin',AuthRequestValidators.validateUserAuth,UserController.signin);
 router.get('/isAuthenticated',UserController.isAuthenticated);
+router.get('/isAdmin',AuthRequestValidators.validateIsAdminRequest,UserController.isAdmin);
 
 module.exports = router;
 

@@ -58,6 +58,8 @@ class UserService {
         }
     }
 
+     
+
     createToken (user){
         try {
             var token = jwt.sign(user,JWT_KEY, { expiresIn: '1d' });
@@ -87,9 +89,14 @@ class UserService {
         }
     }
 
-    
-
-    
+    async isAdmin(userId){
+        try {
+            return await this.userRepository.isAdmin(userId);
+        } catch (error) {
+            console.log("Something went wrong in the password comparison");
+            throw error;
+        }
+    }
 
 
 }
