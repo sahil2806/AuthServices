@@ -21,7 +21,6 @@ const create = async (req,res) =>{
             data: {},
             success: false,
             err: error.description
-            
         })
     }
 }
